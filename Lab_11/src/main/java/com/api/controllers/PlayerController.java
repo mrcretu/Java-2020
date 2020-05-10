@@ -1,21 +1,20 @@
 
 package com.api.controllers;
 
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.List;
 
 import com.api.entities.Player;
+import com.api.services.PlayerService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PlayerController {
 
-    private static final String template = "Hello, I'm player %s!";
-    private final AtomicLong counter = new AtomicLong();
+    private PlayerService playerService = PlayerService.getInstance();
 
-    @GetMapping("/player")
-    public Player greeting(@RequestParam(value = "name", defaultValue = "Marius") String name) {
-        return new Player(counter.incrementAndGet(), String.format(template, name));
+    @GetMapping("/players")
+    public List<Player> greeting() {
+        return playerService.get();
     }
 }
