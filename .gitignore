@@ -21,3 +21,11 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+Lab_10/ClientApplication/out/production/ClientApplication/ui/black.png
+Lab_10/ClientApplication/out/production/ClientApplication/ui/black2.png
+Lab_10/ClientApplication/out/production/ClientApplication/ui/map.png
+Lab_10/ClientApplication/out/production/ClientApplication/ui/white.png
+Lab_10/ClientApplication/out/production/ClientApplication/ui/white2.png
+Lab_10/ServerApplication/.idea/uiDesigner.xml
+Lab_10/ServerApplication/out/production/ServerApplication/META-INF/ServerApplication.kotlin_module
+Lab_10/ClientApplication/.idea/.gitignore
