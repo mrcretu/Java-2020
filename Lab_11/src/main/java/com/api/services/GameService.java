@@ -25,8 +25,5 @@ public class GameService {
     }
 
     private void  seedGameList() {
-         Game G1 = new Game("First game!");
-         Game G2 = new Game("Second game!");
-        games = Arrays.asList(G1, G2);
     }
 }

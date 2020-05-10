@@ -1,20 +1,58 @@
 
 package com.api.controllers;
 
-import java.util.List;
-
 import com.api.entities.Player;
-import com.api.services.PlayerService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.api.exceptions.PlayerNotFoundException;
+import com.api.repositories.PlayerRepository;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.UUID;
 
 @RestController
 public class PlayerController {
 
-    private PlayerService playerService = PlayerService.getInstance();
+    private final PlayerRepository playerRepository;
+
+    public PlayerController(PlayerRepository gameRepository) {
+        this.playerRepository = gameRepository;
+    }
 
     @GetMapping("/players")
-    public List<Player> greeting() {
-        return playerService.get();
+    public List<Player> all() {
+        return (List<Player>) playerRepository.findAll();
+    }
+
+    @PostMapping("/players")
+    public Player add(@RequestBody Player newPlayer) {
+        return playerRepository.save(newPlayer);
+    }
+
+    // Single item
+
+    @GetMapping("/players/{id}")
+    public Player one(@PathVariable UUID id) {
+
+        return playerRepository.findById(id)
+                .orElseThrow(() -> new PlayerNotFoundException(id));
+    }
+
+    @PutMapping("/players/{id}")
+    public Player replacePlayer(@RequestBody Player newPlayer, @PathVariable UUID id) {
+
+        return playerRepository.findById(id)
+                .map(player -> {
+                    player.setName(newPlayer.getName());
+                    return playerRepository.save(player);
+                })
+                .orElseGet(() -> {
+                    newPlayer.setId(id);
+                    return playerRepository.save(newPlayer);
+                });
+    }
+
+    @DeleteMapping("/players/{id}")
+    public void deletePlayer(@PathVariable UUID id) {
+        playerRepository.deleteById(id);
     }
 }

@@ -1,22 +1,35 @@
 package com.api.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.UUID;
-
+@Entity
+@Table(name = "player_tbl")
 public class Player {
+    @Id
+    private UUID id;
+    private String name;
 
-    private final String id;
-    private final String name;
-
-    public Player(String name) {
-        this.id = getId();
-        this.name = name;
+    public Player() {
     }
 
-    public String getId() {
-        return UUID.randomUUID().toString();
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public Player(String name) {
+        this.name = name;
     }
 }
