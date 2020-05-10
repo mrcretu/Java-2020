@@ -1,4 +1,4 @@
-package com.company;
+package compulsory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
