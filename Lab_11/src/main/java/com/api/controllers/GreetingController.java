@@ -1,11 +1,11 @@
 package com.api.controllers;
 
-import java.util.concurrent.atomic.AtomicLong;
+        import java.util.concurrent.atomic.AtomicLong;
 
-import com.api.data.Greeting;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+        import com.api.data.Greeting;
+        import org.springframework.web.bind.annotation.GetMapping;
+        import org.springframework.web.bind.annotation.RequestParam;
+        import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GreetingController {
