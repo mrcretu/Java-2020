@@ -7,7 +7,10 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 enum Command {
-    stop
+    stop,
+    createGame,
+    joinGame,
+    submitMove
 }
 
 public class ClientThread extends Thread {
