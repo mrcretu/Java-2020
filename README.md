@@ -32,7 +32,7 @@ Lab 10 RMI POC can be found at path `Lab_10/ServerApplication/src/rmi`
 ![Clients waiting to start the game](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/Screenshot%202020-05-10%20at%2020.25.53.png)
 
 
-**Link where you can find a video describing postman tests with final controller version **
+**Link where you can find a video describing postman tests with final controller version**
 
 https://www.dropbox.com/s/upkd0xq4bztikae/Postan%20api%20testing.mov?dl=0
 
