@@ -2,8 +2,8 @@
 package com.api.controllers;
 
 import com.api.entities.Game;
-import com.api.exceptions.GameNotFoundException;
 import com.api.repositories.GameRepository;
+import javassist.NotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,10 +30,10 @@ public class GameController {
     // Single item
 
     @GetMapping("/games/{id}")
-    public Game one(@PathVariable UUID id) {
+    public Game one(@PathVariable UUID id) throws NotFoundException {
 
         return gameRepository.findById(id)
-                .orElseThrow(() -> new GameNotFoundException(id));
+                .orElseThrow(() -> new NotFoundException("Customer not found with id " + id));
     }
 
     @PutMapping("/games/{id}")
