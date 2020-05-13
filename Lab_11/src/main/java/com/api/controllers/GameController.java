@@ -1,13 +1,13 @@
 
 package com.api.controllers;
 
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 import com.api.entities.Game;
+import com.api.exceptions.GameNotFoundException;
 import com.api.repositories.GameRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.UUID;
 
 @RestController
 public class GameController {
@@ -19,10 +19,39 @@ public class GameController {
 
     @GetMapping("/games")
     public List<Game> greeting() {
+        return (List<Game>) this.gameRepository.findAll();
+    }
 
-        List<Game> actualList = StreamSupport
-                .stream(this.gameRepository.findAll().spliterator(), false)
-                .collect(Collectors.toList());
-        return actualList;
+    @PostMapping("/games")
+    public Game add(@RequestBody Game newGame) {
+        return gameRepository.save(newGame);
+    }
+
+    // Single item
+
+    @GetMapping("/games/{id}")
+    public Game one(@PathVariable UUID id) {
+
+        return gameRepository.findById(id)
+                .orElseThrow(() -> new GameNotFoundException(id));
+    }
+
+    @PutMapping("/games/{id}")
+    public Game replacePlayer(@RequestBody Game newGame, @PathVariable UUID id) {
+
+        return gameRepository.findById(id)
+                .map(game -> {
+                    game.setDescription(newGame.getDescription());
+                    return gameRepository.save(game);
+                })
+                .orElseGet(() -> {
+                    newGame.setId(id);
+                    return gameRepository.save(newGame);
+                });
+    }
+
+    @DeleteMapping("/games/{id}")
+    public void deleteGame(@PathVariable UUID id) {
+        gameRepository.deleteById(id);
     }
 }
