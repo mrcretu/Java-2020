@@ -33,7 +33,7 @@ public class GameController {
     public Game one(@PathVariable UUID id) throws NotFoundException {
 
         return gameRepository.findById(id)
-                .orElseThrow(() -> new NotFoundException("Customer not found with id " + id));
+                .orElseThrow(() -> new NotFoundException("Game with id " + id + "not found "));
     }
 
     @PutMapping("/games/{id}")
