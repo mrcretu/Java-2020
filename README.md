@@ -21,13 +21,13 @@ Lab 10 RMI POC can be found at path `Lab_10/ServerApplication/src/rmi`
 
 **MS SQL server integration tested with Junit tests**
 
-![Clients waiting to start the game](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/Screenshot%202020-05-10%20at%2019.34.19.png)
+![Clients waiting to start the game](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/screenshots/Screenshot%202020-05-10%20at%2019.34.19.png)
 
 **First api tests with singleton services for retrieving games and players [GamesController]**
 
-![Clients waiting to start the game](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/Screenshot%202020-05-10%20at%2018.16.11.png)
+![Clients waiting to start the game](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/screenshots/Screenshot%202020-05-10%20at%2018.16.11.png)
 
-![Clients waiting to start the game](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/Screenshot%202020-05-10%20at%2020.25.53.png)
+![Clients waiting to start the game](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/screenshots/Screenshot%202020-05-10%20at%2020.25.53.png)
 
 
 **Link where you can find a video describing postman tests with final controller version**
@@ -35,18 +35,26 @@ Lab 10 RMI POC can be found at path `Lab_10/ServerApplication/src/rmi`
 https://www.dropbox.com/s/upkd0xq4bztikae/Postan%20api%20testing.mov?dl=0
 
 **Handle the exceptions using a RestControllerAdvice**
-![Handle the exceptions using a RestControllerAdvice](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/Screenshot%202020-05-13%20at%2020.13.50.png)
+![Handle the exceptions using a RestControllerAdvice](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/screenshots/Screenshot%202020-05-13%20at%2020.13.50.png)
 
 
 **Generate self signed certificate**
-![Generate self signed certificate](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/Screenshot%202020-05-13%20at%2020.18.16.png)
+![Generate self signed certificate](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/screenshots/Screenshot%202020-05-13%20at%2020.18.16.png)
 
 
 **Secure the communication using the HTTPS protocol.**
-![Generate self signed certificate](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/Screenshot%202020-05-13%20at%2020.34.52.png)
+![Generate self signed certificate](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/screenshots/Screenshot%202020-05-13%20at%2020.34.52.png)
 
 **Document your services using Swagger or a similar tool.**
-![Document your services using Swagger or a similar tool.](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/Screenshot%202020-05-13%20at%2020.49.36.png)
+![Document your services using Swagger or a similar tool.](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/screenshots/Screenshot%202020-05-13%20at%2020.49.36.png)
+
+**Secure your services with JSON Web Tokens.**
+![Secure your services with JSON Web Tokens.](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/screenshots/Screenshot%202020-05-13%20at%2023.39.30.png)
+
+![Secure your services with JSON Web Tokens.](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/screenshots/Screenshot%202020-05-13%20at%2023.41.00.png)
+
+
+![Secure your services with JSON Web Tokens.](https://github.com/mrcretu/Java-2020/blob/master/Lab_11/screenshots/Screenshot%202020-05-13%20at%2023.43.18.png)
 
 # **Lab 12 compulsory + optional** 
 
